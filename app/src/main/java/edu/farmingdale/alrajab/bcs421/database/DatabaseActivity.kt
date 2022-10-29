@@ -1,10 +1,12 @@
 package edu.farmingdale.alrajab.bcs421.database
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.room.Room
+import edu.farmingdale.alrajab.bcs421.SharedScreen
 import edu.farmingdale.alrajab.bcs421.databinding.ActivityDatabaseBinding
 import kotlin.random.Random
 
@@ -33,6 +35,10 @@ class DatabaseActivity : AppCompatActivity() {
         dbHelper.addUser(User("Course "+Random.nextInt(6000),
             "CSC "+Random.nextInt(6000)))
 
+        // add data to db
+        var first:String = binding.inpFirst.text.toString()
+        var last:String = binding.inpLast.text.toString()
+        dbHelper.addUser(User(first.toString(),last.toString()))
     }
 
     private fun readData() {

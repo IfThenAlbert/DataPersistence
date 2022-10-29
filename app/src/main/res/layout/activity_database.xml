@@ -14,10 +14,29 @@
         android:layout_weight="1"
         android:text="Read data" />
 
+    <EditText
+        android:id="@+id/inp_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="first name"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/inp_last"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="last name"
+        android:inputType="textPersonName" />
+
     <Button
         android:id="@+id/write_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Write data" />
+
 </LinearLayout>
